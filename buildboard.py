@@ -1,3 +1,4 @@
+n = 1
 def rows(n):                    #row function
     i = 0
     ii = 0
@@ -22,14 +23,20 @@ def end(n):
 
     
 def board():
+    global n
     i = 0
     ii = 0
-    n = input('What size game board would you like to make? ')
+    n = input('What size game board would you like to make?\nType "0" to end program.')
     while i < n:    #recursive row function
         rows(n)
         i += 1
     end(n)  #cap it
    
     
-
-board()
+while True:
+    if n == 0:
+        break
+        False
+    else:
+        board()
+    
